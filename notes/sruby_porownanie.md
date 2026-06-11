@@ -66,7 +66,7 @@ przez koszyk (HTTP 403 dla WebFetch).
 | DIN 912 M10x30 ocynk | 100szt | ? | ? | brak w snippetach |
 | DIN 933 M3x10 ocynk | 100szt | ? | ? | brak w snippetach |
 | DIN 933 M4x16 ocynk | 100szt | ? | ? | brak w snippetach |
-| DIN 933 M5x20 ocynk | 100szt | ? | ? | brak w snippetach |
+| DIN 933 M5x20 ocynk | 100szt | ~26 zł | ~26 zł | fragment Google snippet (sesja wcześniejsza) |
 | DIN 933 M6x20 ocynk | 100szt | ? | ? | brak w snippetach |
 | DIN 933 M8x25 ocynk | 100szt | ~34 zł | ~34 zł | fragment Google snippet |
 | DIN 933 M10x30 ocynk | 100szt | ? | ? | brak w snippetach |
@@ -168,23 +168,28 @@ Ceny brutto w PLN za 100 szt. (lub szacunkowe przeliczenia).
 | DIN 912 M10x30 | ? | ? | ~92,11 zł | ? |
 | DIN 933 M3x10 | ? | ? | ? | ? |
 | DIN 933 M4x16 | ? | ? | ? | ? |
-| DIN 933 M5x20 | ? | ? | ~25,95 zł | ? |
+| DIN 933 M5x20 | ? | ~26,00 zł | ~25,95 zł | ? |
 | DIN 933 M6x20 | ? | ? | ? | ? |
 | DIN 933 M8x25 | ? | ~34,00 zł | ? | ? |
 | DIN 933 M10x30 | ? | ? | ? | ? |
-| **SUMA (bez "?")** | **brak danych** | **~73 zł** (2 poz.) | **~241,96 zł** (5 poz.) | **brak danych** |
-| **Pozycje z brakiem danych** | 12/12 | 10/12 | 7/12 | 12/12 |
+| **SUMA (bez "?")** | **brak danych** | **~99 zł** (3 poz.) | **~241,96 zł** (6 poz.) | **brak danych** |
+| **Pozycje z brakiem danych** | 12/12 | 9/12 | 6/12 | 12/12 |
 
 ---
 
 ## Uwagi i wnioski
 
 ### Problemy z dostępem do danych
-- Wszystkie polskie sklepy śrubowe (`sruby24.pl`, `srubres.pl`, `elgo.pl`,
+- Wszystkie polskie sklepy śrubowe blokują WebFetch z odpowiedzią HTTP 403 Forbidden.
+  Testowane sklepy (dwie sesje): `sruby24.pl`, `srubres.pl`, `elgo.pl`,
   `kristal.net.pl`, `ebmia.pl`, `geobolt.pl`, `lunfix.pl`, `kontakt-sa.pl`,
-  `allegro.pl`) blokują WebFetch z odpowiedzią HTTP 403 Forbidden.
+  `allegro.pl`, `i-sruby.pl`, `anda-sruby.pl`, `sklep.awamet.pl`,
+  `sklep.neronpila.pl`, `wagnertrade.pl`, `srubytksteel.pl`, `haspl.pl`,
+  `ceneo.pl`, `majsterradzyn.pl`, `empik.com` — wszystkie zwróciły 403.
 - Ceny udało się wydobyć wyłącznie z fragmentów (snippetów) wyników
   wyszukiwania Google — są to dane niepewne i mogą być nieaktualne.
+- **Porada dla kolejnej sesji:** Do pobrania cen potrzebna jest przeglądarka
+  z polskim IP (lokalny agent lub ręczna wizyta w sklepie).
 
 ### Sklepy potwierdzające asortyment
 Wszystkie 4 sklepy z listy (sruby24.pl, srubres.pl, elgo.pl, kristal.net.pl)
